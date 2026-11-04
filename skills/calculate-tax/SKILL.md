@@ -1,16 +1,16 @@
 ---
 name: calculate-tax
-description: 'Рассчитать счёт клиенту для получения нужной суммы на руки после налога. Используй для запросов «посчитай налог 60000», «расчёт налога», «сколько выставить клиенту»; по умолчанию налог 7% от суммы счёта.'
+description: "Calculate a client invoice that leaves the requested take-home amount after tax. Use for requests such as 'calculate tax 60000', 'tax calculation', or 'how much should I invoice the client'; the default tax is 7% of the invoice total."
 ---
 
-# calc-tax
+# Calculate Tax
 
-Пользователь получает оплату от клиента и платит налог 7% со всей суммы счёта. В коротком запросе вроде «посчитай налог 60000» число означает желаемую сумму на руки, а задача — рассчитать счёт клиенту. Не уточняй ставку и смысл суммы при таком запросе: эти параметры уже согласованы.
+The user receives a client payment and pays 7% tax on the entire invoice. In a short request such as “calculate tax 60000,” the number means the desired take-home amount, and the task is to calculate the client invoice. Do not ask what the amount means or which rate to use for this request: those defaults are already agreed.
 
-- По умолчанию ставка 7%, валюта — рубли. Явные параметры текущего запроса имеют приоритет.
-- Счёт = желаемая сумма на руки / (1 − ставка / 100). Простое прибавление 7% не подходит.
-- Округляй счёт вверх до копейки, чтобы после налога оставалось не меньше запрошенной суммы. Налог вычисляй от округлённого счёта и округляй до копейки обычным денежным округлением. Проверяй остаток как счёт минус налог; для вычислений используй десятичную арифметику или точные дроби.
-- Если пользователь явно назвал сумму уже выставленного счёта, рассчитай налог и остаток напрямую; если попросил целые рубли, округли счёт вверх до рубля.
-- Отвечай коротко по-русски: сначала сумма счёта, затем налог и сумма на руки. Не добавляй вопросы, юридические справки или поиск действующих ставок: здесь ставка — заданный параметр арифметического расчёта.
+- The default rate is 7%, and the default currency is Russian rubles (RUB). Explicit parameters in the current request take precedence.
+- Invoice = desired take-home amount / (1 − rate / 100). Simply adding 7% is incorrect.
+- Round the invoice up to the nearest kopeck (0.01 RUB) so the amount left after tax is at least the requested amount. Calculate tax from the rounded invoice and round it to the nearest kopeck using ordinary monetary rounding (half up). Verify the remainder as invoice minus tax; use decimal arithmetic or exact fractions.
+- If the user explicitly supplies an invoice amount that has already been issued, calculate tax and the remainder directly. If they request whole rubles, round the invoice up to the next whole ruble.
+- Respond briefly in Russian: invoice amount first, then tax and take-home amount. Do not add questions, legal commentary, or searches for current tax rates: the rate here is a supplied arithmetic parameter.
 
-Пример: «посчитай налог 60000» → «Выставь счёт на **64 516,13 ₽**. Налог 7% — **4 516,13 ₽**, на руки — **60 000 ₽**».
+Example, shown in English: “calculate tax 60000” → “Invoice **RUB 64,516.13**. Tax at 7%: **RUB 4,516.13**. Take-home amount: **RUB 60,000**.”
