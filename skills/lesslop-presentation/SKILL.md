@@ -1,42 +1,42 @@
 ---
 name: lesslop-presentation
-description: "Создание презентаций по запросам «сделай презентацию», «подготовь слайды» и аналогичным: сбор вводных, HTML-слайды, подбор визуального стиля, доводка дизайна и текста, готовый PPTX. Используй автоматически, когда пользователь просит создать презентацию; не запускай для простого обсуждения презентаций или создания скиллов."
+description: "Create presentations for requests such as 'make a presentation' or 'prepare slides': gather inputs, build HTML slides, choose a visual style, refine design and copy, and deliver a finished PPTX. Activate automatically when the user asks to create a presentation; do not activate for simply discussing presentations or creating skills."
 ---
 
-# Создание презентации
+# Create a Presentation
 
-Создавай презентацию через пять обязательных скиллов: `frontend-slides`, `ui-ux-pro-max`, `impeccable`, `humanizer`, `pptx`. Основной результат — готовый файл `.pptx`. HTML-презентацию также сохраняй как исходник.
+Create the presentation using five required skills: `frontend-slides`, `ui-ux-pro-max`, `impeccable`, `humanizer`, and `pptx`. The primary deliverable is a finished `.pptx` file. Also preserve the HTML presentation as source.
 
-## Перед началом: четыре вводных
+## Before starting: four inputs
 
-Сначала проверь исходный запрос, приложенные материалы и уже известный контекст. До разработки структуры, текста и дизайна спроси только недостающие пункты из этих четырех:
+First review the original request, attached materials, and known context. Before developing the structure, copy, or design, ask only for missing items from these four:
 
-1. **О чем презентация?** Например: «Как настроить Codex под себя».
-2. **Для кого презентация?** Например: «Для тех, кто начинает осваивать Codex».
-3. **Какие данные использовать для презентации?** Например: текст от маркетолога, заметки, документ, таблицу или ссылки. Можно ответить, что готовых материалов нет и содержание нужно подготовить самостоятельно.
-4. **Какие референсы по стилю использовать?** Попроси 3–4 референса: изображения, ссылки или примеры презентаций.
+1. **What is the presentation about?** For example: “How to customize Codex.”
+2. **Who is the audience?** For example: “People who are starting to learn Codex.”
+3. **What source material should the presentation use?** For example: marketing copy, notes, a document, a spreadsheet, or links. The user may say there are no prepared materials and ask you to develop the content.
+4. **What visual references should guide the style?** Request three or four references: images, links, or example presentations.
 
-Задавай недостающие вопросы одним сообщением. Для текстовых ответов можно использовать доступный инструмент вопросов, но просьбу приложить файлы или изображения пиши обычным сообщением. Если известны все четыре пункта, сразу приступай к работе. Не спрашивай повторно то, на что пользователь уже ответил.
+Ask all missing questions in one message. You may use an available question tool for text answers, but request file or image attachments in an ordinary message. If all four inputs are known, begin immediately. Do not repeat questions the user has already answered.
 
-Дождись ответов на недостающие вводные. Ответы «материалов нет», «референсов нет» или «выбери сам» достаточны: подготовь содержание или подбери визуальное направление самостоятельно. Если референсов меньше четырех, используй имеющиеся; не требуй дополнить их только ради количества.
+Wait for answers to missing inputs. “No materials,” “no references,” or “choose for me” are sufficient answers: develop the content or choose a visual direction yourself. If fewer than four references are provided, use what is available; do not demand more merely to reach a count.
 
-Эти четыре пункта заменяют стандартную стартовую анкету Frontend Slides. Не добавляй обязательные вопросы о количестве слайдов, плотности или формате выступления: используй заданные пользователем параметры, а остальные разумно выбери по теме и аудитории. Дополнительное уточнение требуется только при существенном противоречии или недоступности необходимых материалов.
+These four inputs replace the standard Frontend Slides intake questionnaire. Do not add mandatory questions about slide count, content density, or presentation format. Use parameters the user provides and make reasonable choices for everything else based on the topic and audience. Ask further questions only to resolve a substantial contradiction or unavailable essential material.
 
-## Пять скиллов и порядок работы
+## Five skills and the workflow
 
-Прочитай актуальный `SKILL.md` каждого из пяти скиллов перед его применением. Ищи их по именам в каталоге доступных скиллов; обычные места установки — `~/.codex/skills/` и `~/.agents/skills/`. Следуй их рабочим инструкциям, учитывая заданный здесь порядок, анкету и требование выдать PPTX. Не считай простое упоминание скилла его применением. Если обязательный скилл отсутствует, сообщи, какой именно; не заявляй о выполнении всей цепочки.
+Read each skill's current `SKILL.md` before applying it. Find them by name in the available skill catalog; common installation locations are `~/.codex/skills/` and `~/.agents/skills/`. Follow their working instructions while respecting the order, intake process, and PPTX delivery requirement here. Merely mentioning a skill does not count as applying it. If a required skill is missing, identify it and do not claim to have completed the full workflow.
 
-1. **Frontend Slides — структура и сборка слайдов.** После получения вводных выдели главную мысль, выстрой последовательность и собери HTML-презентацию. Используй фиксированный холст 16:9 по инструкции скилла, если пользователь не задал другой формат. Количество слайдов определяй по содержанию и аудитории. Не выдумывай факты и цифры; отделяй предоставленные данные от предположений.
-2. **UI UX Pro Max — шрифты, цвета и формы.** До полной сборки выбери согласованную систему: шрифтовую пару, иерархию размеров, палитру, формы и графические элементы. Используй поисковые инструменты скилла для обоснованного подбора. Проверь поддержку языка презентации, в том числе кириллицы, и доступность шрифтов для HTML и PowerPoint. Применяй систему ко всем слайдам.
-3. **Impeccable — арт-дирекшн и доводка дизайна.** Сформулируй визуальную идею по теме и референсам, затем проверь готовые слайды: композицию, иерархию, ритм, отступы, контраст и читаемость. Исправь шаблонные решения, случайные украшения и несогласованность. Сохраняй единый характер презентации при разнообразии композиций.
-4. **Humanizer — редактура текста.** Обработай заголовки, основной текст, подписи и заметки, если они есть: убери ИИ-фразы, канцелярит, пустые обещания и искусственные выводы. Сохрани смысл, факты, термины и голос автора. После правок проверь переносы и размещение текста на слайдах.
-5. **Pptx — готовый PowerPoint.** Прочитай инструкции этого скилла еще при планировании, чтобы дизайн можно было воспроизвести в PPTX. По финальным HTML-слайдам создай настоящий `.pptx`, сохранив содержание, порядок, пропорции и визуальную систему. Текст, базовые фигуры, таблицы и поддерживаемые диаграммы делай редактируемыми средствами PowerPoint; сложные визуальные эффекты можно переносить изображениями. Не заменяй всю презентацию набором скриншотов без явного запроса пользователя. Браузерные анимации адаптируй к статичному состоянию без потери смысла.
+1. **Frontend Slides — structure and slide assembly.** After receiving the inputs, identify the main message, organize the sequence, and build the HTML presentation. Use a fixed 16:9 canvas according to the skill's instructions unless the user specifies another format. Determine slide count from the content and audience. Do not invent facts or figures; distinguish supplied information from assumptions.
+2. **UI UX Pro Max — typography, colors, and shapes.** Before assembling the full deck, choose a coherent system: a font pairing, type hierarchy, palette, shapes, and graphic elements. Use the skill's search tools to inform these choices. Check support for the presentation's language, including Cyrillic when relevant, and font availability in both HTML and PowerPoint. Apply the system across every slide.
+3. **Impeccable — art direction and design refinement.** Define a visual concept based on the topic and references, then review the completed slides for composition, hierarchy, rhythm, spacing, contrast, and readability. Fix generic solutions, arbitrary decoration, and inconsistencies. Keep a consistent character while varying compositions.
+4. **Humanizer — copy editing.** Edit titles, body copy, captions, and speaker notes when present. Remove formulaic AI language, bureaucratic phrasing, empty promises, and artificial conclusions. Preserve meaning, facts, terminology, and the author's voice. After editing, check line breaks and text placement.
+5. **Pptx — finished PowerPoint.** Read this skill's instructions during planning so the design can be reproduced in PPTX. Create a genuine `.pptx` from the final HTML slides, preserving content, order, proportions, and the visual system. Make text, basic shapes, tables, and supported charts editable using native PowerPoint elements; complex visual effects may use images. Do not replace the entire presentation with screenshots unless the user explicitly requests it. Adapt browser animations to a static state without losing meaning.
 
-Арт-дирекшн и редактуру можно начинать до сборки, затем повторять на готовых слайдах. Если пользователь уже определил стиль или дал достаточные референсы, следуй им без обязательного выбора из трех новых вариантов. Если направления нет, используй визуальные превью по Frontend Slides.
+Art direction and copy editing may begin before assembly and be repeated on completed slides. If the user has already defined a style or provided sufficient references, follow them without requiring a choice between three new directions. When no direction exists, use visual previews according to Frontend Slides.
 
-## Проверка и выдача
+## Validation and delivery
 
-- Проверь смысловую последовательность, полноту материалов, правильность фактов и отсутствие выдуманных источников.
-- Проверь HTML и отдельно итоговый PPTX: обрезанный текст, наложения, переносы, шрифты, контраст, поля и согласованность оформления.
-- Выполни обязательную проверку файла и визуальную проверку всех слайдов по инструкции `pptx`; исправь найденные проблемы и перепроверь измененные слайды. Проверка HTML не заменяет проверку PowerPoint.
-- Выдай ссылку на готовый `.pptx` первым результатом, затем ссылку на HTML-исходник. Кратко укажи число слайдов и только существенные ограничения, если они остались. Не объявляй экспорт или проверку успешными, если они не выполнены.
+- Check the narrative sequence, material coverage, factual accuracy, and absence of fabricated sources.
+- Check the HTML and the final PPTX separately for clipped text, overlaps, line breaks, fonts, contrast, margins, and consistent styling.
+- Complete the mandatory file validation and visual inspection of every slide according to `pptx`. Fix problems and inspect changed slides again. Checking HTML does not replace checking PowerPoint.
+- Deliver the finished `.pptx` link first, followed by the HTML source link. Briefly state the slide count and any remaining material limitations. Do not claim that export or validation succeeded if it was not completed.
