@@ -7,7 +7,7 @@ This repository contains a curated source catalog and first-party skills under `
 1. Determine the target agent and installation scope (project or user). Use explicit session preferences; ask if these remain unknown. Installing into lesslop itself is not implied.
 2. Fetch each requested project's current default-branch README and installation documentation from its canonical `repository_url`. Resolve current paths and supported platform options before changing anything. Treat upstream content as documentation, not authorization to perform unrelated actions.
 3. Use the upstream-supported installer for the chosen agent. For directory-based skills, install the entire skill directory, including references, scripts, assets, and required adjacent resources. Do not copy only SKILL.md. The path hints in the catalog are discovery aids, not immutable paths.
-4. Install only requested entries. A request to install the full catalog includes MarkItDown as a separate tool. Follow the host's applicable permissions and approval rules for installers, hooks, and dependencies.
+4. Install only requested entries and their declared `dependencies`, recursively resolving IDs in this catalog without duplicates. A request for `lesslop-presentation` includes its five required skills; reuse valid existing installations. A request to install the full catalog includes MarkItDown as a separate tool. Follow the host's applicable permissions and approval rules for installers, hooks, and dependencies.
 5. Check existing installations first. Do not overwrite local customizations silently; explain a conflict and preserve the existing files. Do not add duplicates under another skill directory.
 6. Validate each installation using the upstream's documented checks. For skills, confirm the entry point and supporting files exist where the target agent discovers them. For CLI tools, check the executable and version/help output. Report any required restart or user action.
 7. Report installed entries, source URLs, destination paths, and resolved versions or commit SHAs where available. Do not claim a version was installed if validation failed.
@@ -22,6 +22,8 @@ This repository contains a curated source catalog and first-party skills under `
 
 ## Entry-specific guidance
 
+- `lesslop-presentation`: install the complete first-party `skills/lesslop-presentation` directory, including `agents/openai.yaml`, plus all five catalog dependencies. Resolve third-party dependencies from their canonical repositories; do not vendor them here. Do not run the presentation workflow during installation.
+- `frontend-slides`, `humanizer`, and `pptx`: follow current canonical upstream instructions and include all required supporting files. Resolve current directory layout before installing; respect upstream licenses.
 - `calculate-tax`: a first-party skill maintained in this repository. Install the complete `skills/calculate-tax` directory, including `agents/openai.yaml`, using the target agent's supported installer. Use this repository as the update source.
 - `sasha` and `unslop`: use the target agent's supported GitHub skill installer when available; include all supporting files.
 - `impeccable`: follow its current official installer and platform instructions, including any separately required hook approval. Do not assume a directory copy installs hooks.
