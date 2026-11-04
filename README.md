@@ -8,6 +8,10 @@
 
 | Проект | Для чего | Источник |
 | --- | --- | --- |
+| lesslop-presentation | Создание HTML-презентации и готового PPTX | [skills/lesslop-presentation](skills/lesslop-presentation) |
+| frontend-slides | Сборка HTML-слайдов | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) |
+| humanizer | Редактура текста и устранение шаблонных ИИ-фраз | [blader/humanizer](https://github.com/blader/humanizer) |
+| pptx | Создание, редактирование и проверка PowerPoint | [anthropics/skills → pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) |
 | calculate-tax | Расчёт счёта для получения нужной суммы после налога; по умолчанию 7% | [skills/calculate-tax](skills/calculate-tax) |
 | sasha | Русские тексты для интерфейсов и документации | [mishanaer/deslop → sasha](https://github.com/mishanaer/deslop/tree/main/sasha) |
 | unslop | Доработка интерфейсов с шаблонным AI-дизайном | [heydamir/unslop](https://github.com/heydamir/unslop) |
@@ -37,6 +41,8 @@
 
 Перед выполнением проверь текущий README источника: команды и структура могут измениться.
 
+- **lesslop-presentation:** установить папку `skills/lesslop-presentation` целиком. Обязательные зависимости: `frontend-slides`, `ui-ux-pro-max`, `impeccable`, `humanizer`, `pptx`. Они перечислены в каталоге; при установке этого скилла установить и недостающие зависимости.
+- **frontend-slides, humanizer, pptx:** использовать актуальные инструкции исходных репозиториев. Устанавливать скиллы со всеми вспомогательными файлами; для `pptx` учитывать лицензию автора.
 - **calculate-tax:** установить папку `skills/calculate-tax` из этого репозитория целиком, включая `agents/openai.yaml`. Пример запроса: «Установи calculate-tax из glkhv/lesslop для Codex».
 - **sasha:** установить папку `sasha` из `mishanaer/deslop` целиком, вместе со вспомогательными файлами.
 - **unslop:** установить папку `skills/unslop` из `heydamir/unslop` целиком.
