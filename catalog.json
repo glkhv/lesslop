@@ -46,13 +46,13 @@
       "repository_url": "https://github.com/glkhv/lesslop",
       "source_url": "https://github.com/glkhv/lesslop/tree/main/skills/calculate-tax",
       "skill_path_hint": "skills/calculate-tax",
-      "distribution": "first-party",
+      "distribution": "repository-hosted",
       "installation": "Install the complete skills/calculate-tax directory from this repository using the target agent's supported installer."
     },
     {
       "id": "lesslop-presentation",
       "kind": "skill",
-      "distribution": "first-party",
+      "distribution": "repository-hosted",
       "repository_url": "https://github.com/glkhv/lesslop",
       "source_url": "https://github.com/glkhv/lesslop/tree/main/skills/lesslop-presentation",
       "skill_path_hint": "skills/lesslop-presentation",
