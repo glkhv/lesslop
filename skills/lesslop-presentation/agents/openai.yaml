@@ -1,6 +1,6 @@
 interface:
   display_name: "lesslop-presentation"
-  short_description: "Презентации: от четырех вводных до готового PPTX"
-  default_prompt: "Используй $lesslop-presentation, чтобы создать презентацию и выдать готовый PPTX."
+  short_description: "Presentations: from four initial inputs to a finished PPTX"
+  default_prompt: "Use $lesslop-presentation to create a presentation and deliver a finished PPTX."
 policy:
   allow_implicit_invocation: true
