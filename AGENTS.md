@@ -1,6 +1,6 @@
 # Installing from lesslop
 
-This repository is a curated source catalog. It does not vendor upstream skills, and cloning it does not install them. Read `catalog.json` to identify the requested entries.
+This repository contains a curated source catalog and first-party skills under `skills/`. It does not vendor upstream skills, and cloning it does not install them. Read `catalog.json` to identify the requested entries.
 
 ## Workflow
 
@@ -22,6 +22,7 @@ This repository is a curated source catalog. It does not vendor upstream skills,
 
 ## Entry-specific guidance
 
+- `calculate-tax`: a first-party skill maintained in this repository. Install the complete `skills/calculate-tax` directory, including `agents/openai.yaml`, using the target agent's supported installer. Use this repository as the update source.
 - `sasha` and `unslop`: use the target agent's supported GitHub skill installer when available; include all supporting files.
 - `impeccable`: follow its current official installer and platform instructions, including any separately required hook approval. Do not assume a directory copy installs hooks.
 - `ui-ux-pro-max`: follow the current official CLI documentation and select the target agent. Preserve its data and scripts; they are part of the installation.
@@ -29,4 +30,4 @@ This repository is a curated source catalog. It does not vendor upstream skills,
 
 ## Maintaining the catalog
 
-Keep README.md and catalog.json aligned. Store canonical upstream links and discovery hints, not copied third-party skill contents. Keep attribution intact. A source reference does not grant a license to redistribute its contents.
+Keep README.md and catalog.json aligned. Store canonical upstream links and discovery hints for third-party entries, not copied third-party skill contents. First-party skills may be maintained directly under `skills/`. Keep attribution intact. A source reference does not grant a license to redistribute its contents.
