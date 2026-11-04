@@ -48,6 +48,46 @@
       "skill_path_hint": "skills/calculate-tax",
       "distribution": "first-party",
       "installation": "Install the complete skills/calculate-tax directory from this repository using the target agent's supported installer."
+    },
+    {
+      "id": "lesslop-presentation",
+      "kind": "skill",
+      "distribution": "first-party",
+      "repository_url": "https://github.com/glkhv/lesslop",
+      "source_url": "https://github.com/glkhv/lesslop/tree/main/skills/lesslop-presentation",
+      "skill_path_hint": "skills/lesslop-presentation",
+      "dependencies": [
+        "frontend-slides",
+        "ui-ux-pro-max",
+        "impeccable",
+        "humanizer",
+        "pptx"
+      ],
+      "installation": "Install the complete skills/lesslop-presentation directory and all five dependencies from this catalog."
+    },
+    {
+      "id": "frontend-slides",
+      "kind": "skill",
+      "repository_url": "https://github.com/zarazhangrui/frontend-slides",
+      "source_url": "https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides",
+      "skill_path_hint": "plugins/frontend-slides/skills/frontend-slides",
+      "installation": "Follow current upstream installation instructions for the target agent; include all supporting files and dependencies."
+    },
+    {
+      "id": "humanizer",
+      "kind": "skill",
+      "repository_url": "https://github.com/blader/humanizer",
+      "source_url": "https://github.com/blader/humanizer",
+      "skill_path_hint": ".",
+      "installation": "Follow current upstream installation instructions for the target agent; include all supporting files and dependencies."
+    },
+    {
+      "id": "pptx",
+      "kind": "skill",
+      "repository_url": "https://github.com/anthropics/skills",
+      "source_url": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+      "skill_path_hint": "skills/pptx",
+      "installation": "Follow current upstream installation instructions for the target agent; include all supporting files and dependencies."
     }
   ]
 }
