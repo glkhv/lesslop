@@ -1,8 +1,8 @@
 # lesslop
 
-My collection of agent skills and tools. Less generic output, more care for writing and interfaces.
+A catalog of agent skills and tools. Less generic output, more care for writing and interfaces.
 
-This repository provides links to original projects and installation guidance. Third-party skills stay in their upstream repositories so authors can keep developing them. First-party skills live in `skills/`.
+This repository provides links to original projects and installation guidance. External skills are linked to their upstream repositories. Skills hosted in this repository live in `skills/`.
 
 ## Catalog
 
@@ -27,7 +27,7 @@ Give your agent this prompt:
 
 ```text
 Read https://github.com/glkhv/lesslop, AGENTS.md, and catalog.json.
-Install the listed skills and MarkItDown for my agent.
+Install the listed skills and MarkItDown for the target agent.
 Use the current installation instructions from each original project.
 Ask which platform and installation scope to use if they are unknown.
 Validate the result and report installed versions and sources.
