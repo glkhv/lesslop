@@ -39,6 +39,15 @@
       "repository_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
       "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
       "installation": "Follow the current ui-ux-pro-max-cli installation instructions and select the target agent."
+    },
+    {
+      "id": "calculate-tax",
+      "kind": "skill",
+      "repository_url": "https://github.com/glkhv/lesslop",
+      "source_url": "https://github.com/glkhv/lesslop/tree/main/skills/calculate-tax",
+      "skill_path_hint": "skills/calculate-tax",
+      "distribution": "first-party",
+      "installation": "Install the complete skills/calculate-tax directory from this repository using the target agent's supported installer."
     }
   ]
 }
