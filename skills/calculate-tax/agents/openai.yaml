@@ -1,4 +1,4 @@
 interface:
   display_name: "Calculate Tax"
-  short_description: "Сумма счёта с учётом налога 7% для выплаты на руки"
-  default_prompt: "Используй $calculate-tax: посчитай счёт, чтобы на руки получить 60000 рублей."
+  short_description: "Calculate an invoice for a target take-home amount after 7% tax"
+  default_prompt: "Use $calculate-tax to calculate an invoice that leaves me 60000 rubles after tax."
