@@ -1,57 +1,57 @@
 # lesslop
 
-Моя подборка скиллов и инструментов для агентов. Меньше шаблонных решений, больше внимания к тексту и интерфейсам.
+My collection of agent skills and tools. Less generic output, more care for writing and interfaces.
 
-Здесь хранятся ссылки на оригинальные проекты и инструкции по установке. Авторы развивают свои проекты в исходных репозиториях; копии сторонних скиллов в lesslop не хранятся. Собственные скиллы находятся в папке `skills/`.
+This repository provides links to original projects and installation guidance. Third-party skills stay in their upstream repositories so authors can keep developing them. First-party skills live in `skills/`.
 
-## Каталог
+## Catalog
 
-| Проект | Для чего | Источник |
+| Project | Purpose | Source |
 | --- | --- | --- |
-| lesslop-presentation | Создание HTML-презентации и готового PPTX | [skills/lesslop-presentation](skills/lesslop-presentation) |
-| frontend-slides | Сборка HTML-слайдов | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) |
-| humanizer | Редактура текста и устранение шаблонных ИИ-фраз | [blader/humanizer](https://github.com/blader/humanizer) |
-| pptx | Создание, редактирование и проверка PowerPoint | [anthropics/skills → pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) |
-| calculate-tax | Расчёт счёта для получения нужной суммы после налога; по умолчанию 7% | [skills/calculate-tax](skills/calculate-tax) |
-| sasha | Русские тексты для интерфейсов и документации | [mishanaer/deslop → sasha](https://github.com/mishanaer/deslop/tree/main/sasha) |
-| unslop | Доработка интерфейсов с шаблонным AI-дизайном | [heydamir/unslop](https://github.com/heydamir/unslop) |
-| impeccable | Дизайн, проверка и доводка интерфейсов | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
-| MarkItDown | Преобразование документов и файлов в Markdown; инструмент Python | [microsoft/markitdown](https://github.com/microsoft/markitdown) |
-| UI UX Pro Max | Подбор решений для UI/UX и дизайн-систем | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
+| lesslop-presentation | Create an HTML presentation and a finished PPTX | [skills/lesslop-presentation](skills/lesslop-presentation) |
+| frontend-slides | Build HTML slides | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) |
+| humanizer | Edit prose and remove formulaic AI writing | [blader/humanizer](https://github.com/blader/humanizer) |
+| pptx | Create, edit, and validate PowerPoint files | [anthropics/skills → pptx](https://github.com/anthropics/skills/tree/main/skills/pptx) |
+| calculate-tax | Calculate an invoice for a target amount after tax; default rate: 7% | [skills/calculate-tax](skills/calculate-tax) |
+| sasha | Russian interface copy and documentation | [mishanaer/deslop → sasha](https://github.com/mishanaer/deslop/tree/main/sasha) |
+| unslop | Refine interfaces with generic AI design | [heydamir/unslop](https://github.com/heydamir/unslop) |
+| impeccable | Design, review, and polish interfaces | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) |
+| MarkItDown | Convert documents and files to Markdown; a Python tool | [microsoft/markitdown](https://github.com/microsoft/markitdown) |
+| UI UX Pro Max | Find UI/UX and design system solutions | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
 
-Машиночитаемый каталог: [catalog.json](catalog.json). Инструкция агенту: [AGENTS.md](AGENTS.md).
+Machine-readable catalog: [catalog.json](catalog.json). Agent instructions: [AGENTS.md](AGENTS.md).
 
-## Как установить через агента
+## Install with an agent
 
-Передай агенту:
+Give your agent this prompt:
 
 ```text
-Прочитай https://github.com/glkhv/lesslop, AGENTS.md и catalog.json.
-Установи перечисленные скиллы и MarkItDown для моего агента.
-Используй актуальные инструкции оригинальных проектов.
-Если платформа или область установки неизвестны, уточни их.
-Проверь результат и перечисли установленные версии и источники.
+Read https://github.com/glkhv/lesslop, AGENTS.md, and catalog.json.
+Install the listed skills and MarkItDown for my agent.
+Use the current installation instructions from each original project.
+Ask which platform and installation scope to use if they are unknown.
+Validate the result and report installed versions and sources.
 ```
 
-Можно выбрать отдельные проекты: «Установи sasha и unslop из каталога glkhv/lesslop для Codex».
+You can also select individual projects: “Install sasha and unslop from glkhv/lesslop for Codex.”
 
-Клонирование lesslop само по себе ничего не устанавливает. Ссылка позволяет получить свежую версию при установке или обновлении, но не обновляет локальные файлы автоматически. Для обновления попроси агента повторно проверить источники и обновить выбранные проекты.
+Cloning lesslop does not install anything. Source links let an agent retrieve the current version during installation or an update; they do not update local files automatically. To update, ask your agent to check the sources again and update the selected projects.
 
-## Ориентиры для установки
+## Installation guidance
 
-Перед выполнением проверь текущий README источника: команды и структура могут измениться.
+Check the source project's current README before running commands: paths and instructions may change.
 
-- **lesslop-presentation:** установить папку `skills/lesslop-presentation` целиком. Обязательные зависимости: `frontend-slides`, `ui-ux-pro-max`, `impeccable`, `humanizer`, `pptx`. Они перечислены в каталоге; при установке этого скилла установить и недостающие зависимости.
-- **frontend-slides, humanizer, pptx:** использовать актуальные инструкции исходных репозиториев. Устанавливать скиллы со всеми вспомогательными файлами; для `pptx` учитывать лицензию автора.
-- **calculate-tax:** установить папку `skills/calculate-tax` из этого репозитория целиком, включая `agents/openai.yaml`. Пример запроса: «Установи calculate-tax из glkhv/lesslop для Codex».
-- **sasha:** установить папку `sasha` из `mishanaer/deslop` целиком, вместе со вспомогательными файлами.
-- **unslop:** установить папку `skills/unslop` из `heydamir/unslop` целиком.
-- **impeccable:** использовать официальный установщик `npx impeccable@latest install`; выбрать своего агента и область установки. Обновление — по актуальной инструкции проекта.
-- **UI UX Pro Max:** использовать официальный CLI, например `npx ui-ux-pro-max-cli@latest init --ai codex` для Codex в текущем проекте. Для другой платформы выбрать её параметр из README источника.
-- **MarkItDown:** установить как инструмент в отдельное Python-окружение по README автора. Пример: `python -m pip install --upgrade 'markitdown[all]'`. Выбирать зависимости под нужные форматы; это не папка со скиллом.
+- **lesslop-presentation:** install the complete `skills/lesslop-presentation` directory. Required dependencies: `frontend-slides`, `ui-ux-pro-max`, `impeccable`, `humanizer`, and `pptx`. Install any missing dependencies from this catalog.
+- **frontend-slides, humanizer, pptx:** follow their current upstream instructions and include all supporting files. Observe the upstream license for `pptx`.
+- **calculate-tax:** install the complete `skills/calculate-tax` directory from this repository, including `agents/openai.yaml`. Example: “Install calculate-tax from glkhv/lesslop for Codex.”
+- **sasha:** install the complete `sasha` directory from `mishanaer/deslop`, including supporting files.
+- **unslop:** install the complete `skills/unslop` directory from `heydamir/unslop`.
+- **impeccable:** use the official installer, `npx impeccable@latest install`, and select your agent and installation scope. Follow the current upstream instructions for updates.
+- **UI UX Pro Max:** use the official CLI; for example, `npx ui-ux-pro-max-cli@latest init --ai codex` installs for Codex in the current project. Choose the appropriate option from the upstream README for other platforms.
+- **MarkItDown:** install it as a tool in a separate Python environment following its README. Example: `python -m pip install --upgrade 'markitdown[all]'`. Select dependencies for the formats you need; this is not a skill directory.
 
-Установленные скиллы могут пересекаться. Для конкретной задачи выбирай подходящий; не запускай все проверки одновременно без необходимости.
+Some skills overlap. Choose the appropriate skill for the task instead of running every review unnecessarily.
 
-## Авторство
+## Attribution
 
-Все перечисленные проекты принадлежат их авторам. Их лицензии и условия использования находятся в исходных репозиториях. lesslop — независимая подборка, не официальный пакет этих проектов.
+Listed projects belong to their respective authors. Their licenses and terms are available in the original repositories. lesslop is an independent collection, not an official bundle from those projects.
