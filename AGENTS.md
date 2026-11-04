@@ -1,6 +1,6 @@
 # Installing from lesslop
 
-This repository contains a curated source catalog and first-party skills under `skills/`. It does not vendor upstream skills, and cloning it does not install them. Read `catalog.json` to identify the requested entries.
+This repository contains a curated source catalog and skills hosted in this repository under `skills/`. It does not vendor upstream skills, and cloning it does not install them. Read `catalog.json` to identify the requested entries.
 
 ## Workflow
 
@@ -22,9 +22,9 @@ This repository contains a curated source catalog and first-party skills under `
 
 ## Entry-specific guidance
 
-- `lesslop-presentation`: install the complete first-party `skills/lesslop-presentation` directory, including `agents/openai.yaml`, plus all five catalog dependencies. Resolve third-party dependencies from their canonical repositories; do not vendor them here. Do not run the presentation workflow during installation.
+- `lesslop-presentation`: install the complete `skills/lesslop-presentation` directory, including `agents/openai.yaml`, plus all five catalog dependencies. Resolve third-party dependencies from their canonical repositories; do not vendor them here. Do not run the presentation workflow during installation.
 - `frontend-slides`, `humanizer`, and `pptx`: follow current canonical upstream instructions and include all required supporting files. Resolve current directory layout before installing; respect upstream licenses.
-- `calculate-tax`: a first-party skill maintained in this repository. Install the complete `skills/calculate-tax` directory, including `agents/openai.yaml`, using the target agent's supported installer. Use this repository as the update source.
+- `calculate-tax`: a skill hosted in this repository. Install the complete `skills/calculate-tax` directory, including `agents/openai.yaml`, using the target agent's supported installer. Use this repository as the update source.
 - `sasha` and `unslop`: use the target agent's supported GitHub skill installer when available; include all supporting files.
 - `impeccable`: follow its current official installer and platform instructions, including any separately required hook approval. Do not assume a directory copy installs hooks.
 - `ui-ux-pro-max`: follow the current official CLI documentation and select the target agent. Preserve its data and scripts; they are part of the installation.
@@ -32,4 +32,4 @@ This repository contains a curated source catalog and first-party skills under `
 
 ## Maintaining the catalog
 
-Keep README.md and catalog.json aligned. Store canonical upstream links and discovery hints for third-party entries, not copied third-party skill contents. First-party skills may be maintained directly under `skills/`. Keep attribution intact. A source reference does not grant a license to redistribute its contents.
+Keep README.md and catalog.json aligned. Store canonical upstream links and discovery hints for third-party entries, not copied third-party skill contents. Skills hosted in this repository may be maintained directly under `skills/`. Keep attribution intact. A source reference does not grant a license to redistribute its contents.
