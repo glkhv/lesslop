@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "name": "lesslop",
+  "update_policy": "Resolve current upstream installation instructions on install or explicit update; installed copies do not auto-update.",
+  "entries": [
+    {
+      "id": "sasha",
+      "kind": "skill",
+      "repository_url": "https://github.com/mishanaer/deslop",
+      "source_url": "https://github.com/mishanaer/deslop/tree/main/sasha",
+      "skill_path_hint": "sasha",
+      "installation": "Install the complete skill directory using the target agent's supported installer."
+    },
+    {
+      "id": "unslop",
+      "kind": "skill",
+      "repository_url": "https://github.com/heydamir/unslop",
+      "source_url": "https://github.com/heydamir/unslop",
+      "skill_path_hint": "skills/unslop",
+      "installation": "Install the complete skill directory using the target agent's supported installer."
+    },
+    {
+      "id": "impeccable",
+      "kind": "skill-suite",
+      "repository_url": "https://github.com/pbakaus/impeccable",
+      "source_url": "https://github.com/pbakaus/impeccable",
+      "installation": "Follow the current upstream official installer instructions for the target agent and scope."
+    },
+    {
+      "id": "markitdown",
+      "kind": "tool",
+      "repository_url": "https://github.com/microsoft/markitdown",
+      "source_url": "https://github.com/microsoft/markitdown",
+      "installation": "Follow upstream Python installation instructions in an isolated environment, selecting required format extras."
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "kind": "skill",
+      "repository_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "source_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "installation": "Follow the current ui-ux-pro-max-cli installation instructions and select the target agent."
+    }
+  ]
+}
